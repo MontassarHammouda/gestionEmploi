@@ -1,0 +1,17 @@
+{# templates/bundles/EasyAdminBundle/default/layout.html.twig #}
+
+{# DON'T DO THIS: it will cause an infinite loop #}
+{% block content_title %}
+    {# ... customize the content title ... #}
+
+    <div class="text-center" >
+    </br></br></br></br></br></br></br>
+        <h1 class="text-uppercase" data-aos="fade-up">Bienvenue</h1>
+        <p  class="text-info " data-aos="fade-up" data-aos-delay="100">Gestion des emplois licence appliquée</p>
+        </br></br></br></br></br></br></br></br>
+    </div>
+
+{% endblock %}
+
+{# DO THIS: the '!' symbol tells Symfony to extend from the original template #}
+{% extends '@!EasyAdmin/default/layout.html.twig' %}

@@ -1,0 +1,150 @@
+{# templates/bundles/EasyAdminBundle/default/layout.html.twig #}
+
+{# DON'T DO THIS: it will cause an infinite loop #}
+{% block content_title %}
+    {# ... customize the content title ... #}
+<table class="table  text-right" border="0">
+    <tr>
+        <div class="row" >
+            <td><p style="margin-left: 70px; margin-bottom: 0px">جــــدول الأوقــــــــات</p></td>
+            <td>وزارة الــدفــــــاع الـوطـــنــي</td>
+        </div>
+    </tr>
+    <tr>
+        <div class="row" >
+            <td></td>
+      <td>جـــــيـــــــــش الـــــطـــــيـــــران</td>
+        </div>
+    </tr>
+    <tr>
+        <div class="row" >
+            <td>{{ emploi.datefin |date('Y/m/d') }}&nbsp; &nbsp; &nbsp;{{ emploi.dateDebut |date('Y/m/d') }}</td>
+            <td>الـــمـــــســتـــوى: الشهادة الوطنية للإجازة التطبيقيـَة</td>
+        </div>
+    </tr>
+    <tr>
+        <div class="row" >
+            <td></td>
+            <td>"الإخـــتـــصـــاص: {{ emploi.classe.nom }}  "{{ emploi.classe.promotion.designation }}  </td>
+        </div>
+    </tr>
+    <tr>
+        <div class="row" >
+            <td></td>
+            <td>عـديد التـلامــذة: &nbsp;&nbsp;&nbsp; {{ emploi.classe.nbeleve }}</td>
+
+        </div>
+    </tr>
+</table>
+<br><br><br>
+<div ><table class="table table-bordered text-center">
+        <tr>
+            <th>15:25 -> 16:55</th>
+            <th>13:45 -> 15:15</th>
+            <th>11:25 -> 12:55</th>
+            <th>09:50 -> 11:20</th>
+            <th>08:05 -> 09:35</th>
+            <th></th>
+        </tr>
+
+        <tr>
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>الإثنان</th>
+        </tr>
+
+        <tr>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>الثلاثاء</th>
+        </tr>
+
+        <tr>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>الإربعاء</th>
+        </tr>
+
+        <tr>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>الخميس</th>
+        </tr>
+
+        <tr>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>الجمعة</th>
+        </tr>
+
+        <tr>
+             <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <td><a  href="#" data-toggle="modal" data-target="#s5"><input type="button" class="btn btn-primary " value="+"  /></a></td>
+
+            <th>السبت</th>
+        </tr>
+
+        <div class="modal fade" id="s5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">choisissez une matière</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body"><div class="col-md-10">
+                   {{ form_widget(states) }}
+                        </div>
+                        Vouler-voulez écriver une chose de votre choix?<a  href="#" data-toggle="modal" data-target="#lu5"><input type="button" class="btn btn-primary " value="Oui"  /></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary" >valider</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </table>
+</div>
+{% endblock %}
+
+{# DO THIS: the '!' symbol tells Symfony to extend from the original template #}
+{% extends '@!EasyAdmin/default/layout.html.twig' %}

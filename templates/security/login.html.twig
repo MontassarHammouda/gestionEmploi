@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img src="../images/logoAviation.png" id="icon" alt="User Icon" />
+                <h1>connectez vous</h1>
+            </div>
+
+
+
+                <form method="post">
+                    {% if error %}
+                        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    {% endif %}
+
+                    {% if app.user %}
+                        <div class="mb-3">
+                            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+                        </div>
+                    {% endif %}
+
+                   
+                    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="email" class="form-control fadeIn second" required autofocus>
+                    <input type="password" name="password" id="inputPassword" placeholder="mot de passe" class="form-control fadeIn third" required>
+
+                    <input type="hidden" name="_csrf_token"
+                        value="{{ csrf_token('authenticate') }}"
+                    >
+
+                    {#
+                        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                        See https://symfony.com/doc/current/security/remember_me.html
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" name="_remember_me"> Remember me
+                            </label>
+                        </div>
+                    #}
+
+                    <button class="fadeIn fourth" type="submit" >
+                        connecter
+                    </button>
+                </form>
+
+
+            <div id="formFooter">
+
+             </div>
+
+         </div>
+     </div>
+
+
+
+{% endblock %}
